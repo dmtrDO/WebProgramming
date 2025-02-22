@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Веб калькулятор для розрахунку складу сухої та 
+        горючої маси палива та нижчої теплоти згоряння для робочої, 
+        сухої та горючої маси за заданим складом компонентів палива</h1>
+
+    <div class="container">
+        <div class="input-fields">
+            <p class="warning">Дробові числа потрібно писати через крапку, 
+                наприклад, 2.5 або 16.2, варіант з 2,5 або 16,2 буде невірим</p>
+
+            <p>H<sup>P</sup> (%):</p>
+            <input id="Hp" placeholder="Введіть H">
+        
+            <p>C<sup>P</sup> (%):</p>
+            <input id="Cp" placeholder="Введіть C">
+        
+            <p>S<sup>P</sup> (%):</p>
+            <input id="Sp" placeholder="Введіть S">
+        
+            <p>N<sup>P</sup> (%):</p>
+            <input id="Np" placeholder="Введіть N">
+        
+            <p>O<sup>P</sup> (%):</p>
+            <input id="Op" placeholder="Введіть O">
+        
+            <p>W<sup>P</sup> (%):</p>
+            <input id="Wp" placeholder="Введіть W">
+        
+            <p>A<sup>P</sup> (%):</p>
+            <input id="Ap" placeholder="Введіть A">
+        
+            <button id="calculateBtn">Розрахувати</button>
+        </div>
+
+        <div class="results">
+            <h2>Результати:</h2>
+            <div id="dryMass"><strong>Склад сухої маси:</strong></div><hr>
+            <div id="combustibleMass"><strong>Склад горючої маси:</strong></div><hr>
+            <div id="heatValue"><strong>Теплота згоряння:</strong></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
