@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Веб калькулятор для розрахунку валових викидів
+        шкідливих речовин у вигляді суспендованих твердих
+        частинок при спалюванні вугілля, мазуту та природного газу
+    </h1>
+
+    <div class="container">
+       <p class="naturalGas">
+            Валовий викид у вигляді твердих частинок при спалюванні природного газу дорівнює нулю !
+       </p>
+       <p class="valueInput">Введіть витрату вугілля в тоннах</p>
+       <input type="text" id="coal" placeholder="Вугілля, т">
+       <p class="valueInput">Введіть витрату мазуту в тоннах</p>
+       <input type="text" id="oil-fuel" placeholder="Мазут, т">
+       <button type="submit" id="button">Розрахувати</button>
+       <p class="error" id="err"></p>
+       <div class="result">
+            <p style="font-weight: bold;">Результат:</p>
+            <div class="result-value">
+                <p>Валовий викид при спалюванні вугілля:</p>
+                <p id="coal-result">0</p>
+                <p>т</p>
+            </div>
+            <div class="result-value">
+                <p>Валовий викид при спалюванні мазуту:</p>
+                <p id="oil-fuel-result">0</p>
+                <p>т</p>
+            </div>
+       </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
