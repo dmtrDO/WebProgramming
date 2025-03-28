@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Веб калькулятор розрахунку прибутку від сонячних електростанцій 
+        з встановленою системою прогнозування сонячної потужності.
+    </h1>
+    <div class="container">
+        <div class="inputs">
+            <p class="warning">Використовується нормальний закон розподілу похибки прогнозу</p>
+            <p>Введіть середньодобову потужність електростанції в МВт:</p>
+            <input type="text" id="power" placeholder="Потужність, МВт">
+            <p>Введіть середньоквадратичне відхилення системи прогнозування сонячної потужності в МВт:</p>
+            <input type="text" id="o1" placeholder="Похибка до вдосконалення, МВт">
+            <p>Введіть середньоквадратичне відхилення в МВт для вдосконалення системи прогнозу сонячної потужності:</p>
+            <input type="text" id="o2" placeholder="Похибка після вдосконалення, МВт">
+            <p>Введіть вартість електроенергії в грн/кВт⋅год:</p>
+            <input type="text" id="cost" placeholder="Вартість, грн/кВт⋅год">
+            <button id="btn">Розрахувати</button>
+            <p class="err" id="err"></p>
+        </div>
+        <div class="results">
+            <div class="result">
+                <p>Прибуток до всдосконалення:</p><p id="result-1">0</p><p>тис. грн</p>
+            </div>
+            <div class="result">
+                <p>Прибуток після вдосконалення:</p><p id="result-2">0</p><p>тис. грн</p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
