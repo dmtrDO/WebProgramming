@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <title>Calculator</title>
+    <link rel="icon" href="favicon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Веб калькулятор для розрахунку струму трифазного КЗ, струму 
+        однофазного КЗ, та перевірки на термічну та динамічну стійкість.
+    </h1>
+
+    <div class="container">
+        <h3>Вибір кабелю для живлення двотрансформаторної ТП</h3>
+       <div class="calculator">
+            <div class="input">
+                <p>Введіть напругу мережі живлення у кВ:</p>
+                <input type="text" placeholder="Напруга, кВ" id="u1">
+                <p>Введіть струм КЗ в кА:</p>
+                <input type="text" placeholder="Струм, кА" id="i1">
+                <p>Введіть фіктивний час вимикання струму КЗ в с:</p>
+                <input type="text" placeholder="Час, с" id="t1">
+                <p>Введіть розрахункове навантаження в кВ⋅А:</p>
+                <input type="text" placeholder="Навантаження, кВ⋅А" id="ui1">
+                <p>Введіть час використання максимального навантаження за рік в год:</p>
+                <input type="text" placeholder="Макс. час навантаження за рік, год" id="mt1">
+                <button id="button1">Розрахувати</button>
+            </div>
+            <div class="output">
+                <div class="res">
+                    <p>Струм нормального режиму:</p><p id="res11">0</p><p>А</p>
+                </div>
+                <div class="res">
+                    <p>Струм післяаварійного режиму:</p><p id="res12">0</p><p>А</p>
+                </div>
+                <div class="res">
+                    <p>Економічний переріз жили:</p><p id="res13">0</p><p>мм<sup>2</sup></p>
+                </div>
+                <div class="res">
+                    <p>Мінімально необхідний переріз за умовою термічної стійкості:</p><p id="res14">0</p><p>мм<sup>2</sup></p>
+                </div>
+                <p class="err" id="err1"></p>
+            </div>
+       </div>
+       <h3>Визначення струму КЗ на шинах ГПП</h3>
+       <div class="calculator">
+            <div class="input">
+                <p>Введіть напругу на шинах в кВ:</p>
+                <input type="text" placeholder="Напруга, кВ" id="u2">
+                <p>Введіть потужність КЗ в МВ⋅А:</p>
+                <input type="text" placeholder="Потужність, кВ" id="ui2">
+                <button id="button2">Розрахувати</button>
+            </div>
+            <div class="output">
+                <div class="res">
+                    <p>Початкове діюче значення струму трифазного КЗ:</p><p id="res2">0</p><p>кА</p>
+                </div>
+                <p class="err" id="err2"></p>
+            </div>
+       </div>
+       <h3>Визначення струму КЗ для підстанції з різними режимами</h3>
+       <div class="calculator">
+            <div class="input">
+                <p>Введіть опір R на шинах 110 кВ ТП для нормального режиму в Ом:</p>
+                <input type="text" placeholder="Нормальний опір R, Ом" id="nr31">
+                <p>Введіть опір X на шинах 110 кВ ТП для нормального режиму в Ом:</p>
+                <input type="text" placeholder="Нормальний опір X, Ом" id="nr32">
+                <p>Введіть опір R на шинах 110 кВ ТП для мінімального режиму в Ом:</p>
+                <input type="text" placeholder="Мінімальний опір R, Ом" id="mr31">
+                <p>Введіть опір X на шинах 110 кВ ТП для мінімального режиму в Ом:</p>
+                <input type="text" placeholder="Мінімальний опір X, Ом" id="mr32">
+                <button id="button3">Розрахувати</button>
+            </div>
+            <div class="output">
+                <div class="res">
+                    <p>Дійсне значення струму трифазного КЗ на шинах 10 кВ в нормальному режимі:</p><p id="res3n3">0</p><p>А</p>
+                </div>
+                <div class="res">
+                    <p>Дійсне значення струму двофазного КЗ на шинах 10 кВ в нормальному режимі:</p><p id="res3n2">0</p><p>А</p>
+                </div>
+                <div class="res">
+                    <p>Дійсне значення струму трифазного КЗ на шинах 10 кВ в мінімальному режимі:</p><p id="res3m3">0</p><p>А</p>
+                </div>
+                <div class="res">
+                    <p>Дійсне значення струму двофазного КЗ на шинах 10 кВ в мінімальному режимі:</p><p id="res3m2">0</p><p>А</p>
+                </div>
+                <p class="err" id="err3"></p>
+            </div>
+       </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
