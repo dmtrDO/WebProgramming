@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <title>Калькулятор</title>
+    <link rel="icon" href="favicon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Веб калькулятор для порівняння
+        надійності одноколової та двоколової систем електропередачі та
+        розрахунку збитків від перерв електропостачання у разі
+        застосування однотрансформаторної ГТП
+    </h1>
+
+    <div class="container">
+        <h3>Порівняння надійності одноколової та двоколової систем</h3>
+       <div class="calculator">
+            <div class="part">
+                <p>Виберіть тип вимикача:</p>
+                <select id="offtype">
+                    <option selected disabled hidden>Натисніть для вибору</option>
+                    <option>В-110 кВ (елегазовий)</option>
+                    <option>В-10 кВ (малооливний)</option>
+                    <option>В-10 кВ (вакуумний)</option>
+                </select>
+                <p>Виберіть тип ліній електропередач:</p>
+                <select id="etransfer">
+                    <option selected disabled hidden>Натисніть для вибору</option>
+                    <option>ПЛ-110 кВ</option>
+                    <option>ПЛ-35 кВ</option>
+                    <option>ПЛ-10 кВ</option>
+                    <option>КЛ-10 кВ (траншея)</option>
+                    <option>КЛ-10 кВ (кабельний канал)</option>
+                </select>
+                <p>Введіть довжину ліній електропередач в км:</p>
+                <input type="text" placeholder="Довжина, км" id="distance">
+                <p>Виберіть трансоформатор:</p>
+                <select id="transformType">
+                    <option selected disabled hidden>Натисніть для вибору</option>
+                    <option>Т-110 кВ</option>
+                    <option>Т-35 кВ</option>
+                    <option>Т-10 кВ (кабельна мережа 10 кВ)</option>
+                    <option>Т-10 кВ (повітряна мережа 10 кВ)</option>
+                </select>
+                <p>Виберіть ввідний вимикач:</p>
+                <select id="inOffType">
+                    <option selected disabled hidden>Натисніть для вибору</option>
+                    <option>В-110 кВ (елегазовий)</option>
+                    <option>В-10 кВ (малооливний)</option>
+                    <option>В-10 кВ (вакуумний)</option>
+                </select>
+                <p>Введіть кількість приєднань 10 кВ:</p>
+                <input type="text" placeholder="Кількість приєднань, шт" id="numOfConnects">
+                <p>Виберіть секційний вимикач для двоколової системи:</p>
+                <select id="sectionOffType">
+                    <option selected disabled hidden>Натисніть для вибору</option>
+                    <option>В-110 кВ (елегазовий)</option>
+                    <option>В-10 кВ (малооливний)</option>
+                    <option>В-10 кВ (вакуумний)</option>
+                </select>
+                <button id="btnCompare">Порівняти</button>
+            </div>
+            <div class="part">
+                <div>
+                    <p>Частота відмов одноколової системи:</p>
+                    <p id="res11">0</p><p>рік<sup> -1</sup></p>
+                </div>
+                <div>
+                    <p>Частота відмов двоколової системи:</p>
+                    <p id="res12">0</p><p>рік<sup> -1</sup></p>
+                </div>
+                <p class="err" id="err1"></p>
+            </div>
+       </div>
+       <h3>Розрахунок збитків від перерв електропостачання</h3>
+       <div class="calculator">
+        <div class="part">
+            <p>Введіть напругу трансформатора в кВ:</p>
+            <input type="text" placeholder="Напруга, кВ" id="u">
+            <p>Введіть питомі збитки у разі аварійних відключень в грн/кВт⋅год:</p>
+            <input type="text" placeholder="Аварійні питомі збитки, грн/кВт⋅год" id="losses1">
+            <p>Введіть питомі збитки у разі планових відключень в грн/кВт⋅год:</p>
+            <input type="text" placeholder="Плановані питомі збитки, грн/кВт⋅год" id="losses2">
+            <button id="btnCalculate">Розрахувати</button>
+        </div>
+        <div class="part">
+            <div>
+                <p>Математичне сподівання збитків від переривання електропостачання:</p>
+                <p id="res2">0</p><p>грн</p>
+            </div>
+            <p class="err" id="err2"></p>
+        </div>
+   </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
