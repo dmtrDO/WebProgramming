@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <title>Калькулятор</title>
+    <link rel="icon" href="favicon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Веб калькулятор для розрахунку електричних навантажень
+        об’єктів з використанням методу впорядкованих діаграм.
+   </h1>
+
+   <table>
+        <thead>
+            <tr>
+                <th>Назва</th>
+                <th>ηN</th>
+                <th>cosφ</th>
+                <th>Un (кВ)</th>
+                <th>n</th>
+                <th>Pn (кВт)</th>
+                <th>Kv</th>
+                <th>tgφ</th>
+            </tr>
+        </thead>
+        <tbody id="table-body"></tbody>
+    </table>
+
+    <div class="calculator">
+        <div class="part">
+            <p>Введіть номінальну потужність шліфувального верстату:</p>
+            <input type="text" placeholder="Потужність, кВт" id="pn">
+            <p>Введіть коефіцієнт використання полірувального верстату:</p>
+            <input type="text" placeholder="Коефіцієнт використання" id="kv">
+            <p>Введіть коефіцієнт реактивної потужності циркулярної пили:</p>
+            <input type="text" placeholder="Коефіцієнт реактивної потужності" id="tg">
+            <button id="btn">Розрахувати</button>
+        </div>
+    
+        <div class="part">
+            <div class="result">
+                <p>Груповий коефіцієнт використання:</p><p id="res1">0</p>
+            </div>
+            <div class="result">
+                <p>Ефективна кількість ЕП:</p><p id="res2">0</p>
+            </div>
+            <div class="result">
+                <p>Розрахунковий коефіцієнт активної потужності:</p><p id="res3">0</p>
+            </div>
+            <div class="result">
+                <p>Розрахункове активне навантаження:</p><p id="res4">0</p><p>кВт</p>
+            </div>
+            <div class="result">
+                <p>Розрахункове реактивне навантаження:</p><p id="res5">0</p><p>квар</p>
+            </div>
+            <div class="result">
+                <p>Повна потужність:</p><p id="res6">0</p><p>кВ⋅А</p>
+            </div>
+            <div class="result">
+                <p>Розрухунковий груповий струм:</p><p id="res7">0</p><p>А</p>
+            </div>
+            <p class="err" id="err"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
